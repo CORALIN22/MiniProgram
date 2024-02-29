@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey-form.freecodecamp</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+    <p id="description">
+      Thank you for taking the time to help is improve the platform
+    </p>
+
+    <form id="survey-form">
+      <label form="name-label" id="name-label"
+        >Name
+        <input
+          type="text"
+          id="name-label"
+          placeholder="Enter your name"
+          required
+      /></label>
+      <label form="email-label" id="email-label"
+        >Email
+        <input
+          type="email"
+          id="email-label"
+          placeholder="Enter your email"
+          required
+      /></label>
+      <label form="number-label" id="number-label"
+        >Age(optional)
+        <input
+          type="number"
+          id="number-label"
+          min="0"
+          ;
+          max="3"
+          ;
+          oninput="this.value = this.value.replace(/[^0-9\.]/g, '')"
+          placeholder="age"
+          required
+      /></label>
+      <label form="role"
+        >Which option best describes your current role?
+        <select id="role">
+          <option value="">Select current role</option>
+          <option value="1">Student</option>
+          <option value="2">Full-Time Job</option>
+        </select>
+      </label>
+      <label for="">Would you recommend freeCodeCamp to a friend?</label>
+      <label for="definitely"
+        ><input
+          id="definitely"
+          type="radio"
+          name="reco"
+          value="definitely"
+          class="inline"
+        />Definitely</label
+      >
+      <label for="maybe"
+        ><input
+          id=""
+          type="radio"
+          name="reco"
+          value="maybe"
+          class="inline"
+        />Maybe</label
+      >
+      <label for="not-sure">
+        <input
+          id="not-sure"
+          type="radio"
+          name="reco"
+          value="not-sure"
+          class="inline"
+        />Note sure</label
+      >
+      <label>What would you like to see improved? (check all that apply)</label>
+      <label for="front-end">
+        <input
+          id="front-end"
+          type="checkbox"
+          value="front-end"
+          required
+          name="front-end"
+          class="inline"
+        />Front-end Projects</label
+      >
+      <label for="challenges">
+        <input
+          id="challenges"
+          type="checkbox"
+          value="challenges"
+          required
+          name="challenges"
+          class="inline"
+        />Challenges</label
+      >
+      <label for="comments"
+        >Any comments and suggestions
+        <textarea
+          id="comments"
+          name="bio"
+          rows="3"
+          cols="30"
+          placeholder="Enter your comment here..."
+        ></textarea>
+      </label>
+      <input id="submit" type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

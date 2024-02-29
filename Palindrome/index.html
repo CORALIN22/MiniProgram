@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" class="inputUser" />
+    <button type="button" class="check">Check</button>
+
+    <script>
+      const isPalindrome = function (str) {
+        let l = 0;
+        let h = str.length - 1;
+
+        while (h > l) {
+          if (str[l] !== str[h]) {
+            return false;
+          }
+          l++;
+          h--;
+        }
+        return true;
+      };
+
+      document.querySelector(`.check`).addEventListener(`click`, function () {
+        const inputUser = document.querySelector(`.inputUser`).value;
+        if (isPalindrome(inputUser)) {
+          console.log(`${inputUser} is a palindrome`);
+        } else {
+          console.log(`${inputUser} is not a palindrome`);
+        }
+      });
+
+      // Start from the first and last character of str
+
+      // Keep comparing characters while they are the same
+    </script>
+  </body>
+</html>
