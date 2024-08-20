@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin: 0;
+   box-sizing: border-box;
+}
+
+html {
+    font-size: 1rem;
+}
+
+body {
+    font-family: 'Raleway',sans-serif;
+    font-weight: normal;
+   
+}
+.container {
+    max-width: 120rem;
+    text-align: center;
+    margin: 2rem auto;
+
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+   
+}
+
+input{
+width: 60rem;
+height: 53px;
+padding: 0.8rem;
+align-items: center;
+border: 1px solid hotpink;
+border-radius: 8px 0 0 8px;
+     
+}
+
+input::placeholder{
+    font-size:  1.5rem;
+    color: rgb(255,105,180,0.4);
+}
+ input[type=text] {
+        font-size: 2rem;
+    }
+
+.btn {
+    flex-shrink: 0;
+    width: 120px;
+    padding: 0.8rem;
+    border: 1px solid hotpink;
+    border-radius: 0 8px 8px 0;
+    background-color: hotpink;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+
+.img {
+    width: 8rem;
+    height: 8rem;
+}
+
+.cont {
+    
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "img-column title"
+    "img-column author"
+    "img-column year"
+    "img-column genre";
+   column-gap: 50px;
+    padding: 20px;
+
+}
+
+
+.img{
+    background-color: red;
+    grid-area: img-column;
+    justify-self: right;
+
+}
+
+
+.title {
+    grid-area: title;
+}
+.author {
+    grid-area: author;
+}
+.year {
+    grid-area: year;
+}
+.genre {
+    grid-area: genre;
+}
